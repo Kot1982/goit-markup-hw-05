@@ -134,7 +134,7 @@ img {
 	color: var(--accent-color);
 }
 .header-contacts-container {
-	margin-right: 50px;
+	margin-right: 30px;
 }
 .header-mail,
 .header-tel {
@@ -221,6 +221,7 @@ img {
 /* Модальное окно */
 .backdrop {
 	position: fixed;
+	z-index: 1;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -234,6 +235,7 @@ img {
 .backdrop.is-hidden {
 	opacity: 0;
 	pointer-events: none;
+	visibility: hidden;
 }
 
 .backdrop.is-hidden .modal {
@@ -245,7 +247,7 @@ img {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
-	background-color: var(--white);
+	background-color: var(--light-color-for-another);
 	padding: 40px;
 	min-width: 528px;
 	min-height: 581px;
@@ -260,7 +262,7 @@ img {
 	bottom: 100%;
 	left: 100%;
 	transform: translate(-130%, 130%);
-	background-color: var(--white);
+	background-color: var(--light-color-for-another);
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
@@ -268,13 +270,7 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	cursor: pointer;
-}
-
-.modal-close:hover,
-.modal-close:focus {
-	fill: var(--accent-color);
 }
 
 /* Стилизация преимуществ */
