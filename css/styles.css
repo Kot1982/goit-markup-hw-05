@@ -237,9 +237,8 @@ img {
 	padding: 20px;
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
-	transition: opacity;
-	transition-duration: var(--transition-duration);
-	transition-timing-function: var(--transition-timing-function);
+	transition: opacity var(--transition-duration) var(--transition-timing-function),
+		visibility var(--transition-duration) var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -249,10 +248,7 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-	transform: translate(-50%, -50%) scale(1);
-	transition: visibility;
-	transition-duration: var(--transition-duration);
-	transition-timing-function: var(--transition-timing-function);
+	transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal {
